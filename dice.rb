@@ -4,5 +4,12 @@ def view(template); erb template.to_sym; end
 before { puts "Parameters: #{params}" }  
 
 get "/" do
-  "Hello, World!"
-end
+
+@dice1 = rand(1..6)
+@dice2 = rand(1..6)
+view "dice"
+
+#"<h1> #{dice1}  #{dice2}</h1>"
+
+
+end 
